@@ -51,7 +51,29 @@ function removeCourse() {
 
 const reports = [];
 
+var modal = document.getElementById("myModal");
+
+// var btn =
+// document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+// btn.onclick = function() {
+//     modal.style.display = "block";
+// }
+span.onclick = function () {
+  modal.style.display = "none";
+};
+function openModal() {
+  modal.style.display = "block";
+}
+window.onclick = function (event) {
+  console.log(event);
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
 function calcCgpa() {
+  openModal();
   const CGPAPARAGRAPH = document.getElementById("cgpa-calc");
   const GRADESSELECT = document.querySelectorAll("select.grade");
   const UNIT = document.querySelectorAll("input.credit-units");
@@ -93,25 +115,5 @@ function calcCgpa() {
     CGPAPARAGRAPH.textContent =
       "please enter your correct grade and credit units";
   }
-
-  $('#myModal').modal(options)
-
-  $('#myModal').modal({
-    keyboard: false
-  })
-
-  $('#myModal').modal('toggle')
-  
-  $('#myModal').modal('hide')
-
-  $('#myModal').modal('show')
-
-  $('#myModal').modal('handleUpdate')
-
-  $('#myModal').modal('dispose')
-
-  $('#myModal').on('hidden.bs.modal', function(event) {
-    calcCgpa()
-  })
+  console.log({ CGPAPARAGRAPH });
 }
-

@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CGPA-CALCULATOR</title>
-    <link rel="stylesheet" type="text/css" href="/bootstrap.css/">
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
     <div class="calculator-box">
-        <h1>CGPA CALCULATOR</h1>
-        <div id="course-wrapper">
-            <form class="key-0">
-                <p> <label id="course-row" for="courses">Courses:</label>
-                <label id="credit-row" for="credit-units">Credit Units:</label>
-                <label id="grade-row" for="grade">Grades:</label></p>
-                <input type="text" placeholder="Course Code" class="courses key-0" required/>
-                <!-- <label for="credit-units">Credit-units:</label> -->
+      <h1>CGPA CALCULATOR</h1>
+      <div id="course-wrapper">
+        <form class="key-0">
+          <p>
+            <label id="course-row" for="courses">Courses:</label>
+            <label id="credit-row" for="credit-units">Credit Units:</label>
+            <label id="grade-row" for="grade">Grades:</label>
+          </p>
+          <input
+            type="text"
+            placeholder="Course Code"
+            class="courses key-0"
+            required
+          />
+          <!-- <label for="credit-units">Credit-units:</label> -->
 
-                <input type="number" class="credit-units key-0" placeholder="Credit Units" value="" required/>
-                <!-- <label for="grade">Grade: </label>  -->
+          <input
+            type="number"
+            class="credit-units key-0"
+            placeholder="Credit Units"
+            value=""
+            required
+          />
+          <!-- <label for="grade">Grade: </label>  -->
 
-                <select class="grade key-0" required><option class="grade" value="select">Select</option>
-                    <option class="grade" value="5">A</option>
-                    <option class="grade" value="4">B</option>
-                    <option class="grade" value="3">C</option>
-                    <option class="grade" value="2">D</option>
-                    <option class="grade" value="1">E</option>
-                    <option class="grade" value="0">F</option>
-                </select>
-            </form>
+          <select class="grade key-0" required>
+            <option class="grade" value="select">Select</option>
+            <option class="grade" value="5">A</option>
+            <option class="grade" value="4">B</option>
+            <option class="grade" value="3">C</option>
+            <option class="grade" value="2">D</option>
+            <option class="grade" value="1">E</option>
+            <option class="grade" value="0">F</option>
+          </select>
+        </form>
+      </div>
+      <!-- <select class="btn">+ Add Course</select> -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>CGPA</h2>
+          </div>
+          <div class="modal-body">
+            <p id="cgpa-calc">Your CGPA is</p>
+          </div>
         </div>
-        <select class="btn">+ Add Course</select>
-        <div class="modal" tabindex="-1">
-            <div class="modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">CGPA</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div>
-                        <p id="cgpa-calc"> Your CGPA is</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" date-dimsss="modal">close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    <div class="btn">   
+      </div>
+      <div class="btn">
         <button onclick="addCourse()">+ Add course</button>
-        <button onclick="removeCourse()">- Remove course</button><br>
-        <button type="button" data-toggle="modal" data-target="#myModal" onclick="calcCgpa()">Calculate CGPA</button>
-    </div> 
-</body>
-<script src="/js/jquery-3.6.0.js" type="text/javascript"></script>
-<script src="/js/popper.min.js" type="text/javascript"></script>
-<script src="/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="index.js" type="text/javascript"></script>
+        <button onclick="removeCourse()">- Remove course</button><br />
+        <button onclick="calcCgpa()" id="myBtn">
+          calculate
+        </button>
+      </div>
+      <!-- <div class="btn1">
+            <h2>Modal Project</h2>
+            <button id="myBtn" class="btn" onclick="openModal()">open modal</button>
+        </div> -->
+    </div>
+  </body>
+  <script src="index.js" type="text/javascript"></script>
 </html>

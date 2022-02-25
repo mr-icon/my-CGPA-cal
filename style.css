@@ -1,124 +1,124 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
-    background-image: linear-gradient(90deg, #0BA0E3, #BBC2C8) ;
-    color: #ffffff;
+  background-image: linear-gradient(90deg, #0ba0e3, #bbc2c8);
+  color: #ffffff;
 }
 
 #course-row {
-    font-size: 20px;
-    font-weight: bolder;
-    margin-left: -2%;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: -2%;
 }
 
 #credit-row {
-    font-size: 20px;
-    font-weight: bolder;
-    margin-left: 13%;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 13%;
 }
 
 #grade-row {
-    font-size: 20px;
-    font-weight: bolder;
-    margin-left: 8%;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 8%;
 }
 
 .calculator-box {
-    width: 50%;
-    height: auto;
-    border: 2px solid #3D515C;
-    margin: 100px auto;
-    /* text-align: center; */
+  width: 50%;
+  height: auto;
+  border: 2px solid #3d515c;
+  margin: 100px auto;
+  /* text-align: center; */
 }
 
 @media screen and (max-width: 1200px) {
-        .calculator-box {
-            width: 70%;
-        }
-    } 
-    
-@media screen and (max-width: 950px) {
-        .calculator-box {
-            width: 75%;
-        }
-    } 
+  .calculator-box {
+    width: 70%;
+  }
+}
 
+@media screen and (max-width: 950px) {
+  .calculator-box {
+    width: 75%;
+  }
+}
 
 @media screen and (max-width: 600px) {
-        .calculator-box {
-            width: 90%;
-        }
-    } 
+  .calculator-box {
+    width: 90%;
+  }
+}
 
 h1 {
-    padding: 15px;
-    font-size: 40px;
-    text-align: center;
-    border: 1px solid #3D515C;
-    background-color: #3D515C;
+  padding: 15px;
+  font-size: 40px;
+  text-align: center;
+  border: 1px solid #3d515c;
+  background-color: #3d515c;
 }
 
 h1:hover {
-    padding: 15px;
-    font-size: 40px;
-    text-align: center;
-    border: 1px solid #3D515C;
-    background-color: #CCC;
-    color: #000;
+  padding: 15px;
+  font-size: 40px;
+  text-align: center;
+  border: 1px solid #3d515c;
+  background-color: #ccc;
+  color: #000;
 }
 
 p {
-    padding: 20px;
-    font-size: 1rem;
-    color: #000;
-    text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  color: #000;
+  text-align: center;
 }
 
-#course-wrapper, form {
-    color: #000;
-    padding-left: 10px;
-    margin: 0 auto;
-    text-align: center;
+#course-wrapper,
+form {
+  color: #000;
+  padding-left: 10px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-input{
-    border: none;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
-    width: 20%;
-    text-align: center;
+input {
+  border: none;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 20%;
+  text-align: center;
 }
 
-select{
-    padding: 15px;
-    border: none;
-    border-radius: 7.5px;
-    width: 20%;
-    /* height: 30px; */
+select {
+  padding: 15px;
+  border: none;
+  border-radius: 7.5px;
+  width: 20%;
+  /* height: 30px; */
 }
 
-button{
-    height: 30px;
-    padding: 3px;
-    margin: 20px auto;
-    /* margin-left: 10px; */
-    border-width: 3px;
-    border-radius: 12%;
-    border-style: solid;
+button {
+  height: 30px;
+  padding: 3px;
+  margin: 20px auto;
+  /* margin-left: 10px; */
+  border-width: 3px;
+  border-radius: 12%;
+  border-style: solid;
 }
 
-.btn{
-    width: 100%;
-    padding: 10px;
-    display: inline-block;
-    margin: 0 auto;
-    text-align: center;
+.btn {
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* .lastb button {
@@ -134,6 +134,61 @@ button{
     color: #000;
 } */
 #lastb:hover {
-    background-color: #CCC;
-    color: black;
+  background-color: #ccc;
+  color: black;
+}
+
+.modal {
+  /* display: none; */
+  position: fixed;
+  z-index: 1;
+  left: o;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  text-align: center;
+}
+.modal-body {
+  padding: 2px 16px;
+  text-align: center;
+}
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+@keyframes amimatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
 }
